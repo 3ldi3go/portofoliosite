@@ -1,0 +1,24 @@
+body{text-align:center;
+     background-color:powderblue;
+    }
+
+.box{
+    max-width: 600px;
+    background-color:lightblue;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+ul{ 
+    max-width:300px;
+    text-align:left;
+    list-style-position:inside;
+    list-style-type:none;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.skills{text-align:center;
+    list-style-type:none;
+}
