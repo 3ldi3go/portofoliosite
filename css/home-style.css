@@ -30,6 +30,7 @@ nav{
     margin:0px; /*margin note: margin met twee values eerste is hoogtes tweede is breedtes*/
     padding:0px;
     position:relative;
+    justify-content:center;
 }
 
 nav a{

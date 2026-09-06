@@ -1,3 +1,67 @@
 body{
     background-image: linear-gradient(to bottom, rgb(50, 231, 255), rgb(34, 170, 255), rgb(0, 7, 218));
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align:left;
+    font-size: 1rem;
     }
+h1{
+    text-align:center;
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.box{
+    width:90%;
+    background-color:rgb(215, 245, 255);
+    padding: 20px; 
+    margin: 2rem auto; /*ff goeie positie bedenken*/
+    border-radius: 10px;
+}
+
+h2{text-align:center;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+li{
+    background-color:rgb(145, 227, 255);
+    max-width:80%;
+    text-align:left;
+    list-style-position:inside;
+    list-style-type:none;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+nav{
+    display:flex;
+    background-color:rgb(204, 166, 255);
+    text-align:center;
+    margin-bottom: 20px;
+    height: 3rem;
+    margin:0px; /*margin note: margin met twee values eerste is hoogtes tweede is breedtes*/
+    padding:0px;
+    position:relative;
+    justify-content:center;
+}
+
+nav a{
+    text-decoration:none;
+    text-align:center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    display:inline-block;
+    padding: 14px 16px;
+    color:rgb(0, 31, 131);
+}
+
+nav a:hover{
+    background-color:rgb(0, 100, 162);
+    color:rgb(255, 255, 255);
+}
+
+nav a:visited{
+    color:rgb(0, 31, 131);
+}
