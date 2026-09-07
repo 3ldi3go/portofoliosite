@@ -1,14 +1,9 @@
 *{box-sizing:border-box;}
 
-html, body{
-    margin:0px;
-    padding:0px;
-    height:100%;
-    width:100%;
-}
-
 body{
-    background-image: linear-gradient(to bottom, rgb(50, 231, 255), rgb(34, 170, 255), rgb(0, 7, 218));
+    background-image: linear-gradient(to bottom, #5ec1ff, #3739ff, #00037d);
+    background-size:cover;
+    background-attachment:fixed;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align:left;
     font-size: 1rem;
@@ -20,31 +15,31 @@ h1{
     margin-bottom: 20px;
 }
 
-.box{
-    width:90%;
-    height:auto;
-    background-color:rgb(215, 245, 255);
-    padding: 20px; 
-    margin: 2rem auto;
-    border-radius: 10px;
-}
-
-h2{text-align:center;
+h2{text-align:left;
     font-size: 1.5rem;
     margin-top: 20px;
     margin-bottom: 20px;
+    padding-left:100px;
 }
 
 li{
     display:flex;
     background-color:rgb(145, 227, 255);
     max-width:80%;
-    max-height: 100px;
+    max-height: 20%;
     text-align:left;
     list-style-position:inside;
     list-style-type:none;
     padding: 20px;
     margin: 20px auto;
+    border-radius: 10px;
+}
+
+li img{ /*kijk weer ff op w3schools voor de moving of images*/
+    max-width: 300px;
+    height:auto;
+    margin-left:38%;
+    border-radius: 10px;
 }
 
 nav{
@@ -79,8 +74,14 @@ nav a:visited{
 }
 
 @media (max-width: 600px){
-    .box{
+    ul{
         width:95%;
         height:auto;
+    }
+    li{
+        flex-direction:column;
+        width:100%;
+        height:auto;
+        justify-content:center;
     }
 }

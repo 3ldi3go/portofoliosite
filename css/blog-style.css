@@ -1,7 +1,9 @@
 *{box-sizing:border-box;}
 
 body{
-    background-image: linear-gradient(to bottom, rgb(50, 231, 255), rgb(34, 170, 255), rgb(0, 7, 218));
+    background-image: linear-gradient(to bottom, #5ec1ff, #3739ff, #00037d);
+    background-size:cover;
+    background-attachment:fixed;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align:left;
     font-size: 1rem;
