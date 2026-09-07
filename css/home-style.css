@@ -1,3 +1,5 @@
+*{box-sizing:border-box;}
+
 body{
     background-image: linear-gradient(to bottom, rgb(50, 231, 255), rgb(34, 170, 255), rgb(0, 7, 218));
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

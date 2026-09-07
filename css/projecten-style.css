@@ -1,3 +1,12 @@
+*{box-sizing:border-box;}
+
+html, body{
+    margin:0px;
+    padding:0px;
+    height:100%;
+    width:100%;
+}
+
 body{
     background-image: linear-gradient(to bottom, rgb(50, 231, 255), rgb(34, 170, 255), rgb(0, 7, 218));
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -13,9 +22,10 @@ h1{
 
 .box{
     width:90%;
+    height:auto;
     background-color:rgb(215, 245, 255);
     padding: 20px; 
-    margin: 2rem auto; /*ff goeie positie bedenken*/
+    margin: 2rem auto;
     border-radius: 10px;
 }
 
@@ -26,8 +36,10 @@ h2{text-align:center;
 }
 
 li{
+    display:flex;
     background-color:rgb(145, 227, 255);
     max-width:80%;
+    max-height: 100px;
     text-align:left;
     list-style-position:inside;
     list-style-type:none;
@@ -64,4 +76,11 @@ nav a:hover{
 
 nav a:visited{
     color:rgb(0, 31, 131);
+}
+
+@media (max-width: 600px){
+    .box{
+        width:95%;
+        height:auto;
+    }
 }

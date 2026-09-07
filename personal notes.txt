@@ -1,13 +1,5 @@
-- gradient background color en text box van whoami wit maken miss? of heel desaturated blauw (licht blauw?)
-- nav bar netjes opmaken
+
 - bovenkant waar titel staat mooie opmaak geven?
 - een consistent theme creëeren is het handigst voorkomt een kinderachtig blik
   en een chaotische expressie
     denk voor mij het best een monochromatic theme in het blauw of een analoguos theme met gebruik van blaur en zijn buren
-
-- mogelijk sidebar aanpassen ligt eraan hoe goed dit werkt op telefoon ofzo
-
-- misschien leuk om horror rangschik erin te zetten vind horrorfilms toch leuk
-
-- GITHUB PAGE WERKT NIET, probs want eerste page aint index.html dussssss
-  is in principe een issue voor later
