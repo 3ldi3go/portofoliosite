@@ -1,5 +1,22 @@
 *{box-sizing:border-box;}
 
+header{
+    background-color:#79d3ff;
+    text-align:left;
+    padding-left: 60px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.7rem;
+    padding-top: 25px;
+    padding-bottom:22px;
+    width:100%;
+    border-radius: 10px;
+}
+
+h1{
+    margin:0px;
+    padding:0px;
+}
+
 body{
     background-image: linear-gradient(to bottom, #5ec1ff, #3739ff, #00037d);
     background-size:cover;
@@ -8,12 +25,6 @@ body{
     text-align:left;
     font-size: 1rem;
     }
-h1{
-    text-align:center;
-    font-size: 2rem;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
 
 .box{
     width:60%;
@@ -27,14 +38,18 @@ h1{
 
 nav{
     display:flex;
-    background-color:rgb(204, 166, 255);
+    flex-direction:row;
+    background-color:#594bac;
+    border-radius: 10px;
     text-align:center;
     margin-bottom: 20px;
+    margin-top:0px;
     height: 3rem;
-    margin:0px; /*margin note: margin met twee values eerste is hoogtes tweede is breedtes*/
+    margin:0px;
     padding:0px;
     position:relative;
     justify-content:center;
+  
 }
 
 nav a{
@@ -44,14 +59,10 @@ nav a{
     font-size: 1.2rem;
     display:inline-block;
     padding: 14px 16px;
-    color:rgb(0, 31, 131);
+    color:rgb(175, 194, 255);
 }
 
 nav a:hover{
-    background-color:rgb(0, 100, 162);
-    color:rgb(255, 255, 255);
-}
-
-nav a:visited{
-    color:rgb(0, 31, 131);
+    background-color:rgb(73, 26, 166);
+    color:rgb(133, 255, 255);
 }
