@@ -66,3 +66,17 @@ nav a:hover{
     background-color:rgb(73, 26, 166);
     color:rgb(133, 255, 255);
 }
+
+@media (max-width: 600px){
+    header{
+        font-size:1.5rem;
+    }
+    .box{
+        width:80%;
+        height:auto;
+        justify-content:center;
+    }
+    nav a
+    {font-size:1rem;
+    padding: 10px 12px;}
+}
