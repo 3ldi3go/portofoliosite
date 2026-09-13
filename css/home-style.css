@@ -12,7 +12,7 @@ header{
     border-radius: 10px;
 }
 
-header h1{
+h1{
     margin:0px;
     padding:0px;
 }
@@ -20,50 +20,20 @@ header h1{
 body{
     background-image: linear-gradient(to bottom, #5ec1ff, #3739ff, #00037d);
     background-size:cover;
+    background-attachment:fixed;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align:left;
+    font-size: 1rem;
     }
 
-.item{
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    align-items:center;
-    margin: 10px auto;
-}
-
-.item img{
-    max-width: 300px;
-    height:auto;
-    margin: 20px;
-    border-radius: 10px;
-}
-
 .box{
-    width:70%;
-    max-width: 900px;
+    width:60%;
+    max-width: 800px;
     background-color:rgb(215, 245, 255);
     padding: 20px; 
-    margin: 30px 20px;
+    margin: 2rem; /*ff goeie positie bedenken*/
     border-radius: 10px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align:center;
-    font-size: 1rem;
-}
-
-ul{ 
-    text-align:left;
-    list-style-position:inside;
-    list-style-type:none;
-    padding: 20px;
-    margin: 20px auto;
-}
-
-.hobbies{
-    text-align:center;
-    max-width: 500px;
-}
-
-.skills{text-align:center;
-    list-style-type:none;
+    position:relative;
 }
 
 nav{
@@ -98,21 +68,15 @@ nav a:hover{
 }
 
 @media (max-width: 600px){
+    header{
+        font-size:1.5rem;
+    }
     .box{
         width:80%;
         height:auto;
+        justify-content:center;
     }
-
     nav a
     {font-size:1rem;
     padding: 10px 12px;}
-
-    .item{
-        flex-direction:column;
-        justify-content:center;
-        align-items:center;
-        margin: 20px auto;
-    }   
 }
-
-
