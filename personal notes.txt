@@ -1,5 +1,2 @@
-
-- bovenkant waar titel staat mooie opmaak geven?
-- een consistent theme creëeren is het handigst voorkomt een kinderachtig blik
-  en een chaotische expressie
-    denk voor mij het best een monochromatic theme in het blauw of een analoguos theme met gebruik van blaur en zijn buren
+- voor de api wil ik denk ik iets van een weerbericht of idd aangegeven quote van de dag op de home pagina vertonen, lijkt me wel leuk
+en dit vult dde home pagina aan
