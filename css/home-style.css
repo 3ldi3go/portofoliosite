@@ -1,7 +1,7 @@
 *{box-sizing:border-box;}
 
 header{
-    background-color:#79d3ff;
+    background-color:#90caf9;
     text-align:left;
     padding-left: 60px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -18,7 +18,7 @@ h1{
 }
 
 body{
-    background-image: linear-gradient(to bottom, #5ec1ff, #3739ff, #00037d);
+    background-image: linear-gradient(to bottom, #90caf9,#2196f3, #0d47a1);
     background-size:cover;
     background-attachment:fixed;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -29,7 +29,7 @@ body{
 .box{
     width:60%;
     max-width: 800px;
-    background-color:rgb(215, 245, 255);
+    background-color:#e3f2fd;
     padding: 20px; 
     margin: 2rem; /*ff goeie positie bedenken*/
     border-radius: 10px;
@@ -38,7 +38,7 @@ body{
 
 ul{
     display:flex;
-    background-color:rgb(215, 245, 255);
+    background-color:#e3f2fd;
     max-width:20%;
     max-height: 200px;
     text-align:left;
@@ -59,7 +59,7 @@ li img{
 nav{
     display:flex;
     flex-direction:row;
-    background-color:#594bac;
+    background-color:#0d47a1;
     border-radius: 10px;
     text-align:center;
     margin-bottom: 20px;
@@ -79,11 +79,11 @@ nav a{
     font-size: 1.2rem;
     display:inline-block;
     padding: 14px 16px;
-    color:rgb(175, 194, 255);
+    color:rgb(207, 218, 255);
 }
 
 nav a:hover{
-    background-color:rgb(73, 26, 166);
+    background-color:#093370;
     color:rgb(133, 255, 255);
 }
 
