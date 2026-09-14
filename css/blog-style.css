@@ -36,6 +36,21 @@ body{
     position:relative;
 }
 
+li{
+    display:flex;
+    background-color:rgb(215, 245, 255);
+    max-width:80%;
+    max-height: 200px;
+    text-align:left;
+    list-style-position:inside;
+    list-style-type:none;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    transition: max-width 2s, max-height 2s;
+    justify-content:space-between;
+}
+
 nav{
     display:flex;
     flex-direction:row;
