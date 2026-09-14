@@ -47,7 +47,7 @@ li{
     padding: 20px;
     margin: 20px auto;
     border-radius: 10px;
-    transition: max-width 2s, max-height 2s, font-size 2s;
+    transition: max-width 2s, max-height 2s;
     justify-content:space-between;
 }
 
@@ -61,7 +61,6 @@ li img{
 li:hover{
     max-width: 83%;
     max-height: 250px;
-    font-size: 1.2rem;
 }
 
 nav{
