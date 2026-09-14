@@ -1,2 +1,9 @@
 - voor de api wil ik denk ik iets van een weerbericht of idd aangegeven quote van de dag op de home pagina vertonen, lijkt me wel leuk
 en dit vult dde home pagina aan
+
+feedback:
+- home page aanpassen, te kaal. Denk aan scenario: iemand bezoekt website en wilt direct zien of kunnen navigeren naar wat je skills zijn
+make it pop more. (misschien 3 blokken met de paginas (tip van docent))
+- whoami pagina goed gestructureert alleen plat, het is wel te zien maar dingen zoals de skills poppen niet echt naar voren hoe kan je dat fixen? 
+GEBRUIK BRONNEN
+- kleuren misschien aanpassen op basis van kleuren palette website
