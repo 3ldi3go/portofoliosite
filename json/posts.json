@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "title": "Post 1",
+      "date": "07-09-2026",
+      "content": "Ik was best slim begonnen aan de pagina. Ik begon direct met coderen en dat was onhandig van mij. Dus alles opnieuw gedaan en teruggegaan naar de tekentafel. Ik ben op Canva een design gaan maken met een monochromatische blauwe stijl, witte tekstvakken en afgeronde hoeken voor een bubbly effect dat goed past bij het waterachtige thema."
+    },
+    {
+      "title": "Post 2",
+      "date": "07-09-2026",
+      "content": "Na lange moeite heb ik de bug opgelost waarbij de achtergrond zich herhaalde op deze pagina en de projectenpagina. De oorzaak was dat de pagina groter was dan de achtergrondafbeelding. Door gebruik te maken van background-size en background-attachment valt de achtergrond nu netjes over de hele pagina, ongeacht de grootte."
+    },
+    {
+      "title": "Post 3",
+      "date": "14-09-2026",
+      "content": "De era van de katfoto is bijna voorbij. Ik ben bezig om deze te vervangen met juiste foto's. Ik weet nog niet of ik deze post laat staan, maar voor nu mag het van mij wel."
+    },
+    {
+      "title": "Post 4",
+      "date": "14-09-2026",
+      "content": "We gaan weer een stap terug. Na feedback moest ik dingen aanpassen zoals kleurgebruik. De homepagina wordt uitgebreid en WhoAmI wordt duidelijker gemaakt met behulp van bronnen."
+    },
+    {
+      "title": "Post 5",
+      "date": "21-09-2026",
+      "content": "We zijn officieel bezig met het aanpassen van de projecten pagina en ook deze pagina. Dit werkt nu via een JSON bestand hoe leuk is dat, hetzelfde geldt ook voor de projecten pagina dus we hebben beetje automatisering ipv van handmatig toevoegen."
+    }
+  ]
+}

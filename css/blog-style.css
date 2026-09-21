@@ -30,7 +30,6 @@ li{
     display:flex;
     background-color: #e3f2fd;
     max-width:80%;
-    max-height: 200px;
     text-align:left;
     list-style-position:inside;
     list-style-type:none;

@@ -33,7 +33,7 @@ h2{text-align:left;
     font-size: 1.5rem;
     margin-top: 20px;
     margin-bottom: 20px;
-    padding-left:100px;
+    margin-left:100px;
 }
 
 li{
@@ -67,6 +67,25 @@ li:hover{
     max-width: 83%;
     height: 250px;
     font-size: 1.2rem;
+}
+
+button {
+    background-color: #0d47a1;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 10px;
+    margin-left: 100px;
+}
+
+button:hover {
+    background-color: #093370;
+    color:rgb(133, 255, 255);
 }
 
 nav{
@@ -126,6 +145,16 @@ nav a:hover{
     nav a {
     font-size:1rem;
     padding: 10px 12px;}
+}
+
+@media(max-width:505px){
+    button{
+        margin-left:0px;
+    }
+    h2{
+        margin-left:0px;
+    }
+
 }
 
 @media (max-width: 400px){

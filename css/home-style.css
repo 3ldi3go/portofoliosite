@@ -1,6 +1,8 @@
 *{box-sizing:border-box;}
 
 header{
+    display:flex;
+    justify-content:space-between;
     background-color:#90caf9;
     text-align:left;
     padding-left: 60px;
@@ -12,8 +14,18 @@ header{
     border-radius: 10px;
 }
 
+
+#joke{
+    font-size: 1rem;
+    font-style:italic;
+    padding-right: 60px;
+    align-self:center;
+}
+
+
 h1{
     margin:0px;
+    margin-right: 100px;
     padding:0px;
 }
 
