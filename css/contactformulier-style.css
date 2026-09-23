@@ -1,0 +1,121 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    background-image: linear-gradient(to bottom, #90caf9,#2196f3, #0d47a1);
+    background-size:cover;
+    background-attachment:fixed;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align:left;
+    font-size: 1rem;
+}
+
+
+header{
+    display:flex;
+    justify-content:space-between;
+    background-color:#90caf9;
+    padding-left: 60px;
+    padding-top: 25px;
+    padding-bottom:22px;
+    font-size: 1.7rem;
+    width:100%;
+    border-radius: 10px;
+}
+
+header h1{
+    margin:0;
+    padding:0;
+}
+
+/* NAVIGATIE */
+nav{
+    display:flex;
+    flex-direction:row;
+    background-color:#0d47a1;
+    border-radius: 10px;
+    text-align:center;
+    margin-bottom: 20px;
+    height: 3rem;
+    justify-content:center;
+}
+
+nav a{
+    text-decoration:none;
+    text-align:center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    display:inline-block;
+    padding: 14px 16px;
+    color:rgb(207, 218, 255);
+}
+
+nav a:hover{
+    background-color:#093370;
+    color:rgb(133, 255, 255);
+}
+
+
+#contactForm{
+    margin: 20px 10%;
+    width:60%;
+    max-width:600px;
+    background-color:#e3f2fd;
+    padding: 20px;
+    border-radius: 10px;
+    display:flex;
+    flex-direction:column;
+}
+
+
+label{
+    margin-top:15px;
+    font-weight:bold;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border-radius:5px;
+    border:1px solid #0d47a1;
+    font-size:1rem;
+}
+
+textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+
+button{
+    margin-top:20px;
+    padding:12px;
+    background-color:#0d47a1;
+    color:#e3f2fd;
+    border:none;
+    border-radius:10px;
+    font-size:1.2rem;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color:#093370;
+}
+
+
+@media (max-width: 600px){
+    header{
+        font-size:1.5rem;
+    }
+
+    nav a{
+        font-size:1rem;
+        padding:10px 12px;
+    }
+
+    #contactForm{
+        width:80%;
+    }
+}

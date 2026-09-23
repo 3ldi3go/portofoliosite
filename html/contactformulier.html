@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contactformulier</title>
+        <link rel="stylesheet" href="../css/contactformulier-style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Contactformulier</h1>
+        </header>
+
+        <nav>
+            <a class="home" href="../index.html">Terug naar Home</a>
+            <a class="wieBenIk" href="WhoAmI.html">WhoAmI</a>
+            <a class="projecten" href="projecten.html">Projecten</a>
+            <a class="blog" href="blog.html">Mijn blog</a>
+        </nav>
+
+        <main>
+            <form id="contactForm">
+                <label for="name">Naam:</label>
+                <input type="text" id="name" name="name" required minlength="2" aria-describedby="nameError" aria-invalid="false">
+                <span id="nameError" class="error-message" role="alert"></span>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Bericht:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Verzenden</button>
+            </form>
+        </main>
+
+        <script src="../js/contactformulier-script.js"></script>
+    </body>
+</html>

@@ -24,6 +24,11 @@
       "title": "Post 5",
       "date": "21-09-2026",
       "content": "We zijn officieel bezig met het aanpassen van de projecten pagina en ook deze pagina. Dit werkt nu via een JSON bestand hoe leuk is dat, hetzelfde geldt ook voor de projecten pagina dus we hebben beetje automatisering ipv van handmatig toevoegen."
+    },
+    {
+      "title": "Post 6",
+      "date": "21-09-2026",
+      "content": "De contactpagina is toegevoegd en de navigatie is aangepast. Je kan nu vanuit elke pagina naar het contactformulier komen, ook kan je vanuit de contactformulier naar elke pagina van deze website "
     }
   ]
 }
