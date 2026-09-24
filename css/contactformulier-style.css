@@ -58,7 +58,7 @@ nav a:hover{
 
 
 #contactForm{
-    margin: 20px 10%;
+    margin: 20px auto;
     width:60%;
     max-width:600px;
     background-color:#e3f2fd;

@@ -26,9 +26,11 @@
 
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email" required>
+                <span id="emailError" class="error-message" role="alert"></span>
 
                 <label for="message">Bericht:</label>
-                <textarea id="message" name="message" required></textarea>
+                <textarea id="message" name="message" required minlength="10"></textarea>
+                <span id="messageError" class="error-message" role="alert"></span>
 
                 <button type="submit">Verzenden</button>
             </form>
