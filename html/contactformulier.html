@@ -20,19 +20,20 @@
 
         <main>
             <form id="contactForm">
-                <label for="name">Naam:</label>
-                <input type="text" id="name" name="name" required minlength="2" aria-describedby="nameError" aria-invalid="false">
-                <span id="nameError" class="error-message" role="alert"></span>
+                <label for="naam">Naam:</label>
+                <input type="text" id="naam" name="naam" required minlength="2" aria-describedby="naamError" aria-invalid="false">
+                <span id="naamError" class="error-message" role="alert"></span>
 
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required aria-describedby="emailError" aria-invalid="false">
                 <span id="emailError" class="error-message" role="alert"></span>
 
-                <label for="message">Bericht:</label>
-                <textarea id="message" name="message" required minlength="10"></textarea>
-                <span id="messageError" class="error-message" role="alert"></span>
+                <label for="bericht">Bericht:</label>
+                <textarea id="bericht" name="bericht" required minlength="10" aria-describedby="berichtError" aria-invalid="false"></textarea>
+                <span id="berichtError" class="error-message" role="alert"></span>
 
                 <button type="submit">Verzenden</button>
+                <div id="formstatus" aria-live="polite"></div>
             </form>
         </main>
 

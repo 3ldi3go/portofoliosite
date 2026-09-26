@@ -16,7 +16,6 @@ fetch(url)
         } else if (data.type === "twopart") {
             jokeElement.textContent = `${data.setup} - ${data.delivery}`;
         }
-        joke.appendChild(jokeElement);
     })
     .catch(error => {
         console.error("Error fetching joke data:", error);
