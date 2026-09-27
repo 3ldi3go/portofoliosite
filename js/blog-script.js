@@ -15,15 +15,34 @@ fetch(blogPostsList)
 function maakBlogPostsLijst(blogPostsData){
     postMessages.innerHTML = "";
 
-        blogPostsData.forEach(post => {
-            const li = document.createElement("li");
-            const p = document.createElement("p");
+    blogPostsData.forEach(post => {
+        const li = document.createElement("li");
+        const button = document.createElement("button");
+        const p = document.createElement("p");
 
-            p.textContent = `${post.title} (${post.date}): ${post.content}`;
+        button.classList.add("collapsible");
+        button.textContent = `${post.title} (${post.date})`;
 
-            li.appendChild(p);
-            postMessages.appendChild(li);
+        p.textContent = post.content;
+
+        li.appendChild(button);
+        li.appendChild(p);
+        postMessages.appendChild(li);
+    });
+
+    document.querySelectorAll(".collapsible").forEach(button => {
+        button.addEventListener("click", function() {
+            this.classList.toggle("active");
+            const p = this.nextElementSibling;
+
+            if (p.style.maxHeight) {
+                p.style.maxHeight = null;
+                p.style.padding = "0 20px";
+            } else {
+                p.style.padding = "20px";
+                p.style.maxHeight = p.scrollHeight +  "px";
+            }
         });
-    
+    });
 }
 

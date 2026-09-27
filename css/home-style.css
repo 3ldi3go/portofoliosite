@@ -38,6 +38,13 @@ body{
     font-size: 1rem;
     }
 
+.item{
+    display:flex;
+    flex-direction:row;
+    align-items:flex-start;
+    gap: 2rem;
+}
+
 .box{
     width:60%;
     max-width: 800px;
@@ -47,6 +54,24 @@ body{
     border-radius: 10px;
     position:relative;
 }
+
+.references{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    margin: 2rem;
+    padding: 20px;
+    background-color:#e3f2fd;
+    height: fit-content;
+    border-radius: 10px;
+}
+.references img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain; 
+
+}
+
 
 ul{
     display:flex;
@@ -90,21 +115,21 @@ li img{
 
 .belangrijk .wieBenIk{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/cat-mlem.png");
+    url("../img/whoami.jpg");
     background-size:cover;
     background-position:center;
 }
 
 .belangrijk .projecten{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/html-example.png");
+    url("../img/html-example.jpg");
     background-size:cover;
     background-position:center;
 }
 
 .belangrijk .blog{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/blog.png");
+    url("../img/blog.jpg");
     background-size:cover;
     background-position:center;
 }
