@@ -1,6 +1,8 @@
 *{box-sizing:border-box;}
 
 header{
+    display:flex;
+    justify-content:space-between;
     background-color:#90caf9;
     text-align:left;
     padding-left: 60px;
@@ -12,8 +14,18 @@ header{
     border-radius: 10px;
 }
 
+
+#joke{
+    font-size: 1rem;
+    font-style:italic;
+    padding-right: 60px;
+    align-self:center;
+}
+
+
 h1{
     margin:0px;
+    margin-right: 100px;
     padding:0px;
 }
 
@@ -26,15 +38,40 @@ body{
     font-size: 1rem;
     }
 
+.item{
+    display:flex;
+    flex-direction:row;
+    align-items:flex-start;
+    gap: 2rem;
+}
+
 .box{
     width:60%;
     max-width: 800px;
     background-color:#e3f2fd;
     padding: 20px; 
-    margin: 2rem; /*ff goeie positie bedenken*/
+    margin: 2rem; 
     border-radius: 10px;
     position:relative;
 }
+
+.references{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    margin: 2rem;
+    padding: 20px;
+    background-color:#e3f2fd;
+    height: fit-content;
+    border-radius: 10px;
+}
+.references img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain; 
+
+}
+
 
 ul{
     display:flex;
@@ -55,8 +92,49 @@ li img{
     height: 50px;
     margin-left:0px;
 }
+.belangrijk{
+    display:flex;
+    flex-direction:row;
+}
 
-nav{
+.belangrijk a{
+    background-color:#031126;
+    border-color:#e3f2fd;
+    color:#e3f2fd;
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 10px;
+    height: 40%;
+    text-align:center;
+    margin: 50px 50px;
+    padding:150px;
+    position:relative;
+    justify-content:center;
+    text-decoration:none;
+}
+
+.belangrijk .wieBenIk{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/whoami.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+.belangrijk .projecten{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/html-example.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+.belangrijk .blog{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/blog.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+.basic{
     display:flex;
     flex-direction:row;
     background-color:#0d47a1;
@@ -72,7 +150,7 @@ nav{
   
 }
 
-nav a{
+.basic a{
     text-decoration:none;
     text-align:center;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -82,7 +160,7 @@ nav a{
     color:rgb(207, 218, 255);
 }
 
-nav a:hover{
+.basic a:hover{
     background-color:#093370;
     color:rgb(133, 255, 255);
 }
@@ -96,7 +174,11 @@ nav a:hover{
         height:auto;
         justify-content:center;
     }
-    nav a
+    .basic a
     {font-size:1rem;
     padding: 10px 12px;}
+    .belangrijk{
+        margin: 20px 20px;
+        flex-direction:column;
+    }
 }
