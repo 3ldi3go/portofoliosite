@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A2/ZVVN01VM=",
+  "dgSpecHash": "9EvZrd8Ma/M=",
   "success": true,
-  "projectFilePath": "C:\\Users\\dpmva\\Documents\\projects\\school\\school opdrachten en oefeningen\\portofoliosite\\portofolioBackend\\portofolioBackend.csproj",
+  "projectFilePath": "C:\\Users\\dpmva\\Documents\\Coding projects\\school\\portofoliosite\\portofolioBackend\\portofolioBackend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dpmva\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\dpmva\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.12\\microsoft.aspnetcore.openapi.10.0.12.nupkg.sha512",

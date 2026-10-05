@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dpmva\\Documents\\projects\\school\\school opdrachten en oefeningen\\portofoliosite\\portofolioBackend\\portofolioBackend.csproj": {}
+    "C:\\Users\\dpmva\\Documents\\Coding projects\\school\\portofoliosite\\portofolioBackend\\portofolioBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dpmva\\Documents\\projects\\school\\school opdrachten en oefeningen\\portofoliosite\\portofolioBackend\\portofolioBackend.csproj": {
+    "C:\\Users\\dpmva\\Documents\\Coding projects\\school\\portofoliosite\\portofolioBackend\\portofolioBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dpmva\\Documents\\projects\\school\\school opdrachten en oefeningen\\portofoliosite\\portofolioBackend\\portofolioBackend.csproj",
+        "projectUniqueName": "C:\\Users\\dpmva\\Documents\\Coding projects\\school\\portofoliosite\\portofolioBackend\\portofolioBackend.csproj",
         "projectName": "portofolioBackend",
-        "projectPath": "C:\\Users\\dpmva\\Documents\\projects\\school\\school opdrachten en oefeningen\\portofoliosite\\portofolioBackend\\portofolioBackend.csproj",
+        "projectPath": "C:\\Users\\dpmva\\Documents\\Coding projects\\school\\portofoliosite\\portofolioBackend\\portofolioBackend.csproj",
         "packagesPath": "C:\\Users\\dpmva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dpmva\\Documents\\projects\\school\\school opdrachten en oefeningen\\portofoliosite\\portofolioBackend\\obj\\",
+        "outputPath": "C:\\Users\\dpmva\\Documents\\Coding projects\\school\\portofoliosite\\portofolioBackend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dpmva\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -14,6 +14,18 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
+app.Run();
 
-
+public static class PostEndpoints
+{
+    public static RouteGroupBuilder MapPosts(
+        this IEndpointRouteBuilder endpoints
+    )
+    {
+        var posts = endpoints.MapGroup("/posts");
+        posts.MapGet("/", () => "all");
+        posts.MapGet("/{id}", (int id) => id);
+        return posts;
+    }
+}
 
