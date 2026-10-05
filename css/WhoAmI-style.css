@@ -122,4 +122,18 @@ nav a:hover{
     }   
 }
 
-
+@media (max-width: 400px){
+    header{
+        font-size:1.2rem;
+        padding-left: 20px;
+    }
+    nav a{
+        font-size:0.8rem;
+        padding: 8px 10px;
+    }
+    .item img{
+        max-width: 250px;
+        height:auto;
+        margin: 10px;
+    }
+}

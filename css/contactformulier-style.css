@@ -119,3 +119,14 @@ button:hover{
         width:80%;
     }
 }
+
+@media (max-width: 400px){
+    header{
+        font-size:1.2rem;
+        padding-left: 20px;
+    }
+    nav a{
+        font-size:0.8rem;
+        padding: 8px 10px;
+    }
+}
