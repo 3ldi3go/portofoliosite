@@ -182,3 +182,59 @@ li img{
         flex-direction:column;
     }
 }
+
+@media (max-width: 400px){
+    header{
+        font-size:1.2rem;
+        padding-left: 20px;
+    }
+
+    .box{
+        width:90%;
+        height:auto;
+        justify-content:center;
+    }
+
+    /* BELANGRIJK: alles onder elkaar */
+    .belangrijk{
+        flex-direction:column !important;
+        align-items:center;
+        width:100%;
+        gap: 1rem;
+    }
+
+    .belangrijk a{
+        width:90%;
+        margin: 10px 0;
+        padding: 80px; /* minder padding zodat het niet uitrekt */
+    }
+
+    /* item netjes onder elkaar */
+    .item{
+        flex-direction:column !important;
+        gap: 1rem;
+        width:100%;
+    }
+
+    /* references ook onder elkaar */
+    .references{
+        flex-direction:row;
+        align-items:center;
+        width:60%;
+        padding: 10px;
+    }
+
+    .references img{
+        width:80px;
+        height:80px;
+    }
+
+    .basic a{
+        font-size:0.8rem;
+        padding: 8px 10px;
+    }
+    #joke{
+        font-size:0.6rem;
+        padding-right: 20px;
+    }
+}
