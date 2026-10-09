@@ -180,3 +180,4 @@ C:\Users\dpmva\Documents\projects\school\school opdrachten en oefeningen\portofo
 C:\Users\dpmva\Documents\projects\school\school opdrachten en oefeningen\portofoliosite\portofolioBackend\obj\Debug\net10.0\portofolioBackend.pdb
 C:\Users\dpmva\Documents\projects\school\school opdrachten en oefeningen\portofoliosite\portofolioBackend\obj\Debug\net10.0\portofolioBackend.genruntimeconfig.cache
 C:\Users\dpmva\Documents\projects\school\school opdrachten en oefeningen\portofoliosite\portofolioBackend\obj\Debug\net10.0\ref\portofolioBackend.dll
+C:\Users\dpmva\Documents\projects\school\school opdrachten en oefeningen\portofoliosite\portofolioBackend\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.InMemory.dll
