@@ -1,5 +1,5 @@
 const projecten = document.getElementById("projecten");
-const projectenlijst = "../json/projecten.json";
+const projectenlijst = "http://localhost:5262/projecten";
 const alfabetButton = document.getElementById("alfabet");
 
 
@@ -8,7 +8,7 @@ let projectenData = null;
 fetch(projectenlijst)
     .then(response => response.json())
     .then(data => {
-        projectenData = data.projects;
+        projectenData = data;
         maakProjectenLijst(projectenData);
     })  
     .catch(error => {

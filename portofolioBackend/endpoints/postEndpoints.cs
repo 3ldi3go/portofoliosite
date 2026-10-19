@@ -4,41 +4,59 @@ public static class PostEndpoints
 {
     public static void MapPostEndpoints(this IEndpointRouteBuilder app)
     {
-        app.MapGet("/posts" , async (portofolioDB db) => await db.Posts.ToListAsync());
-app.MapGet("/posts/{id}", async (int id, portofolioDB db) => 
-    await db.Posts.FindAsync(id) is Posts post 
-        ? Results.Ok(post) 
-        : Results.NotFound());
-app.MapPost("/posts", async (Posts post, portofolioDB db) => 
-{
-    db.Posts.Add(post);
-    await db.SaveChangesAsync();
-    return Results.Created($"/posts/{post.id}", post);
-});
-app.MapPut("/posts/{id}", async (int id, Posts inputPost, portofolioDB db) => 
-{
-    var post = await db.Posts.FindAsync(id);
+        // GET all
+        app.MapGet("/posts", async (portofolioDB db) =>
+            await db.Posts.ToListAsync());
 
-    if (post is null) return Results.NotFound();
+        // GET ID
+        app.MapGet("/posts/{id}", async (int id, portofolioDB db) =>
+            await db.Posts.FindAsync(id) is Posts post
+                ? Results.Ok(post)
+                : Results.NotFound());
 
-    post.title = inputPost.title;
-    post.description = inputPost.description;
-    post.date = inputPost.date;
+        // POST 
+        app.MapPost("/posts", async (PostCreateDto dto, portofolioDB db) =>
+        {
+            var post = new Posts
+            {
+                title = dto.title,
+                description = dto.description,
+                date = dto.date
+            };
 
-    await db.SaveChangesAsync();
+            db.Posts.Add(post);
+            await db.SaveChangesAsync();
 
-    return Results.NoContent();
-});
-app.MapDelete("/posts/{id}", async (int id, portofolioDB db) => 
-{
-    if (await db.Posts.FindAsync(id) is Posts post)
-    {
-        db.Posts.Remove(post);
-        await db.SaveChangesAsync();
-        return Results.Ok(post);
-    }
+            return Results.Created($"/posts/{post.id}", post);
+        });
 
-    return Results.NotFound();
-});
+        // PUT 
+        app.MapPut("/posts/{id}", async (int id, PostUpdateDto dto, portofolioDB db) =>
+        {
+            var post = await db.Posts.FindAsync(id);
+
+            if (post is null) return Results.NotFound();
+
+            post.title = dto.title;
+            post.description = dto.description;
+            post.date = dto.date;
+
+            await db.SaveChangesAsync();
+
+            return Results.NoContent();
+        });
+
+        // DELETE 
+        app.MapDelete("/posts/{id}", async (int id, portofolioDB db) =>
+        {
+            if (await db.Posts.FindAsync(id) is Posts post)
+            {
+                db.Posts.Remove(post);
+                await db.SaveChangesAsync();
+                return Results.Ok(post);
+            }
+
+            return Results.NotFound();
+        });
     }
 }

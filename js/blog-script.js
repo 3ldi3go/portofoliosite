@@ -1,12 +1,12 @@
 const postMessages = document.getElementById("blogPosts");
-const blogPostsList = "../json/posts.json";
+const blogPostsList = "http://localhost:5262/posts";
 
 let blogPostsData = null;
 
 fetch(blogPostsList)
     .then(response => response.json())
     .then(data => {
-        blogPostsData = data.posts;
+        blogPostsData = data;
         maakBlogPostsLijst(blogPostsData);})
     .catch(error => {
         console.error("Error fetching blog data:", error);
@@ -23,7 +23,7 @@ function maakBlogPostsLijst(blogPostsData){
         button.classList.add("collapsible");
         button.textContent = `${post.title} (${post.date})`;
 
-        p.textContent = post.content;
+        p.textContent = post.description;
 
         li.appendChild(button);
         li.appendChild(p);
