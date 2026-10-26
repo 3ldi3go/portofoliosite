@@ -1,0 +1,19 @@
+.NET versie : 10.0.401
+API-stijl : ASP.NET Core Minimal API
+
+de volgende mappen betreffen code structuur:
+- de map data bevat de DBContext
+- de map DTO bevat de DTO's voor zowel projecten als posts
+- de map endpoints bevat alle minimal endpoints voor projecten en posts
+- de map model bevat de entiteiten projecten en posts
+
+voor de database is er gebruik gemaakt van een postgresql server
+maak bij gebruik van de code een eigen appsettings.json aan in de project root met een eigen connectionstring dat jouw eigen username en wachtwoord bevat
+
+Voorbeeld:
+
+{ "ConnectionStrings": { "portofolioDB": "Host=localhost;Port=5432;Database=portfoliowebsite;Username=hallo;Password=hallo123" } }
+
+hierna kan de database worden aangemaakt met: dotnet ef database update 
+
+Als laatst kan je de applicatie starten met dotnet run
