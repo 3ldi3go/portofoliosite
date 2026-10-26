@@ -1,6 +1,7 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-class portofolioDB : DbContext
+class portofolioDB : IdentityDbContext<User>
 {
     public portofolioDB(DbContextOptions<portofolioDB> options) : base(options)
     {

@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 public static class ProjectenEndpoints
 {
@@ -30,7 +31,7 @@ public static class ProjectenEndpoints
             await db.SaveChangesAsync();
 
             return Results.Created($"/projecten/{project.id}", project);
-        });
+        }).RequireAuthorization();
 
         // PUT
         app.MapPut("/projecten/{id}", async (int id, ProjectenUpdateDto dto, portofolioDB db) =>
@@ -48,7 +49,7 @@ public static class ProjectenEndpoints
             await db.SaveChangesAsync();
 
             return Results.NoContent();
-        });
+        }).RequireAuthorization();
 
         // DELETE
         app.MapDelete("/projecten/{id}", async (int id, portofolioDB db) =>

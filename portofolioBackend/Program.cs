@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,15 @@ builder.Services.AddDbContext<portofolioDB>(opt => opt.UseNpgsql(connectionStrin
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddIdentityApiEndpoints<User>()
+.AddRoles<IdentityRole>()
+.AddEntityFrameworkStores<portofolioDB>();
+builder.Services.AddAuthentication();
+builder.Services.AddAuthorization();
+
+builder.Services.AddAuthorizationBuilder()
+.AddPolicy("CanEdit", policy => policy.RequireRole("Admin", "Editor"));
 
 builder.Services.AddCors(options =>
 {
@@ -29,6 +39,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseCors();
 
+app.UseHttpsRedirection();
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapGroup("/auth").MapIdentityApi<User>();
 
 app.MapProjectenEndpoints();
 app.MapPostEndpoints();
