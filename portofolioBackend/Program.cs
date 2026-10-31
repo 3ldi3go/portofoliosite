@@ -43,9 +43,12 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapGroup("/auth").MapIdentityApi<User>();
 
+app.MapRegisterEndpoint();
+app.MapLoginEndpoint();
 app.MapProjectenEndpoints();
 app.MapPostEndpoints();
+
+await DbSeeder.SeedAsync(app.Services);
 
 app.Run();

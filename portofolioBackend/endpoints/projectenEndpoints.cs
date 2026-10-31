@@ -31,7 +31,7 @@ public static class ProjectenEndpoints
             await db.SaveChangesAsync();
 
             return Results.Created($"/projecten/{project.id}", project);
-        }).RequireAuthorization();
+        }).RequireAuthorization("CanEdit");
 
         // PUT
         app.MapPut("/projecten/{id}", async (int id, ProjectenUpdateDto dto, portofolioDB db) =>
@@ -49,7 +49,7 @@ public static class ProjectenEndpoints
             await db.SaveChangesAsync();
 
             return Results.NoContent();
-        }).RequireAuthorization();
+        }).RequireAuthorization("CanEdit");
 
         // DELETE
         app.MapDelete("/projecten/{id}", async (int id, portofolioDB db) =>
@@ -62,6 +62,6 @@ public static class ProjectenEndpoints
             }
 
             return Results.NotFound();
-        });
+        }).RequireAuthorization("CanEdit");
     }
 }
