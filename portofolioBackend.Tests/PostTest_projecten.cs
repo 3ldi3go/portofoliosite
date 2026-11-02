@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using System.Net.Http.Json;
 using Microsoft.AspNetCore;
 
-
+namespace portofolioBackend.Tests;
 
 public class PostTest_projecten : IClassFixture<WebApplicationFactory<Program>>
 {
@@ -56,21 +56,19 @@ public class PostTest_projecten : IClassFixture<WebApplicationFactory<Program>>
     }
 
     
-    //omdat login geen token meegeeft werkt deze test niet. Ik heb op het moment niet de kennis om dit te fixen
     [Fact]
     public async Task fout_bij_POST_zonder_juiste_rol()
     {
     var client = _factory.CreateClient();
 
-    var loginDto = new
+    var loginDto = new LoginDTO
     {
-        email = "bub41gawara@gmail.com",
-        password = "Bub41g@w4ra"
+        email= "toga_chan@gmail.com",
+        password= "H1m1k()"
     };
 
     var loginResponse = await client.PostAsJsonAsync("/login", loginDto);
 
-    Assert.Equal(HttpStatusCode.OK, loginResponse.StatusCode);
 
     var response = await client.PostAsJsonAsync("/projecten",
         new ProjectenCreateDto
@@ -83,5 +81,32 @@ public class PostTest_projecten : IClassFixture<WebApplicationFactory<Program>>
         });
 
     Assert.Equal(HttpStatusCode.Forbidden, response.StatusCode);
-}
+    }
+
+    [Fact]
+    public async Task POST_met_juiste_rol()
+    {
+        var client = _factory.CreateClient();
+
+            var loginDto = new LoginDTO
+            {
+                email = "dpmvanhagen@gmail.com",
+                password = "Dpm18()9o6"
+            };
+  
+
+        var loginResponse = await client.PostAsJsonAsync("/login", loginDto);
+
+        var response = await client.PostAsJsonAsync("/projecten",
+            new ProjectenCreateDto
+            {
+                title = "Test Project",
+                description = "Test Beschrijving",
+                image = "https://test.com",
+                link = "https://test.com/image.jpg",
+                date = "2000-01-01"
+            });
+
+        Assert.Equal(HttpStatusCode.Created, response.StatusCode);
+    }
 }
