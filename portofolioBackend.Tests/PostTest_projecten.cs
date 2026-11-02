@@ -20,20 +20,21 @@ public class PostTest_projecten : IClassFixture<WebApplicationFactory<Program>>
 
     public async Task<string> GetTokenAsync()
     {
-        var client = _factory.CreateClient();
+    var client = _factory.CreateClient();
 
-        var loginDTO = new
-        {
-            Email = "bub41gawara@gmail.com",
-            Password = "Bub41g@w4ra!"
-        };
+    var loginDTO = new
+    {
+        Email = "bub41gawara@gmail.com",
+        Password = "Bub41g@w4ra!"
+    };
 
-        var response = await client.PostAsJsonAsync("/login", loginDTO);
-        var content = await response.Content.ReadAsStringAsync();
-        var token = System.Text.Json.JsonDocument.Parse(content).RootElement.GetProperty("token").GetString();
+    var response = await client.PostAsJsonAsync("/login", loginDTO);
 
-        return token;
-    }
+    var result = await response.Content.ReadFromJsonAsync<LoginResponseDto>();
+
+    return result!.Token;
+}
+
 
     [Fact]
 
@@ -54,16 +55,24 @@ public class PostTest_projecten : IClassFixture<WebApplicationFactory<Program>>
         Assert.Equal(HttpStatusCode.Unauthorized, response.StatusCode);
     }
 
+    
+    //omdat login geen token meegeeft werkt deze test niet. Ik heb op het moment niet de kennis om dit te fixen
     [Fact]
     public async Task fout_bij_POST_zonder_juiste_rol()
     {
-        var client = _factory.CreateClient();
+    var client = _factory.CreateClient();
 
-        var token = await GetTokenAsync();
+    var loginDto = new
+    {
+        email = "bub41gawara@gmail.com",
+        password = "Bub41g@w4ra"
+    };
 
-        client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+    var loginResponse = await client.PostAsJsonAsync("/login", loginDto);
 
-        var response = await client.PostAsJsonAsync("/projecten",
+    Assert.Equal(HttpStatusCode.OK, loginResponse.StatusCode);
+
+    var response = await client.PostAsJsonAsync("/projecten",
         new ProjectenCreateDto
         {
             title = "Test Project",
@@ -72,6 +81,7 @@ public class PostTest_projecten : IClassFixture<WebApplicationFactory<Program>>
             link = "https://test.com/image.jpg",
             date = "2000-01-01"
         });
-        Assert.Equal(HttpStatusCode.Forbidden, response.StatusCode);
-    }
+
+    Assert.Equal(HttpStatusCode.Forbidden, response.StatusCode);
+}
 }
