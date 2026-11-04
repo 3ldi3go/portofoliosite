@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("portofolioDB");
+
 builder.Services.AddDbContext<portofolioDB>(opt => opt.UseNpgsql(connectionString));
 
 builder.Services.AddEndpointsApiExplorer();
