@@ -2,6 +2,8 @@ using System.Net;
 using Xunit;
 using portofolioBackend;
 using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace portofolioBackend.Tests;
 
@@ -29,8 +31,13 @@ public class GetTests_posts : IClassFixture<WebApplicationFactory<Program>>
     public void Get_post_by_id()
     {
         var client = _factory.CreateClient();
+        var scope = _factory.Services.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService<portofolioDB>();
 
-        var response = client.GetAsync("/posts/1").Result;
+        var post = db.Posts.FirstOrDefault();
+        var postId = post?.id;
+
+        var response = client.GetAsync($"/posts/{postId}").Result;
 
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
     }
