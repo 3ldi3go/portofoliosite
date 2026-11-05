@@ -2,6 +2,8 @@
 using Xunit;
 using portofolioBackend;
 using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace portofolioBackend.Tests;
 
@@ -30,7 +32,13 @@ public class GetTests_projecten : IClassFixture<WebApplicationFactory<Program>>
     {
         var client = _factory.CreateClient();
 
-        var response = client.GetAsync("/projecten/1").Result;
+        var scope = _factory.Services.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService<portofolioDB>();
+        
+        var project = db.Projecten.FirstOrDefault();
+        var projectId = project?.id; 
+
+        var response = client.GetAsync($"/projecten/{projectId}").Result;
 
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
     }
