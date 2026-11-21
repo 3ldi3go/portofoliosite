@@ -1,19 +1,61 @@
-.NET versie : 10.0.401
-API-stijl : ASP.NET Core Minimal API
+# Portfolio Backend API
 
-de volgende mappen betreffen code structuur:
-- de map data bevat de DBContext
-- de map DTO bevat de DTO's voor zowel projecten als posts
-- de map endpoints bevat alle minimal endpoints voor projecten en posts
-- de map model bevat de entiteiten projecten en posts
+## Algemene informatie
 
-voor de database is er gebruik gemaakt van een postgresql server
-maak bij gebruik van de code een eigen appsettings.json aan in de project root met een eigen connectionstring dat jouw eigen username en wachtwoord bevat
+- .NET versie: 10.0.401
+- API\-stijl: ASP.NET Core Minimal API
+- Database: PostgreSQL
+
+## Projectstructuur
+
+- **Data**: bevat de DbContext en databaseconfiguratie.
+- **DTO**: bevat de DTO's voor projecten en blogposts.
+- **Endpoints**: bevat alle Minimal API\-endpoints.
+- **Model**: bevat de entiteiten Project en Post.
+
+## Database configureren
+
+Maak in de root van het project een bestand **appsettings.json** aan met een eigen PostgreSQL\-connectionstring.
 
 Voorbeeld:
 
-{ "ConnectionStrings": { "portofolioDB": "Host=localhost;Port=5432;Database=portfoliowebsite;Username=hallo;Password=hallo123" } }
+\{
 
-hierna kan de database worden aangemaakt met: dotnet ef database update 
+  "ConnectionStrings": \{
 
-Als laatst kan je de applicatie starten met dotnet run
+    "portofolioDB": "Host=localhost;Port=5432;Database=portfoliowebsite;Username=gebruikersnaam;Password=wachtwoord"
+
+  \}
+
+\}
+
+Voer vervolgens de Identity\- en databasemigraties uit:
+
+dotnet ef database update
+
+## API starten
+
+Start de applicatie met:
+
+dotnet run
+
+## Gebruikers en rollen
+
+Registreer eerst een gebruiker via het /register endpoint.
+
+Voeg vervolgens in de database de gewenste rollen toe aan deze gebruiker zodat deze als Editor of Admin kan functioneren tijdens het testen van de beveiligde endpoints.
+
+## Tests uitvoeren
+
+Alle geautomatiseerde tests kunnen uitgevoerd worden met:
+
+dotnet test
+
+De tests controleren:
+
+- Registratie
+- Login
+- CRUD\-operaties voor Projecten
+- CRUD\-operaties voor Blogposts
+- Autorisatie voor gewone gebruikers, Editors en Admins
+

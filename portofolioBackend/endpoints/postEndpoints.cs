@@ -28,7 +28,7 @@ public static class PostEndpoints
             await db.SaveChangesAsync();
 
             return Results.Created($"/posts/{post.id}", post);
-        });
+        }).RequireAuthorization("CanEdit");
 
         // PUT 
         app.MapPut("/posts/{id}", async (int id, PostUpdateDto dto, portofolioDB db) =>
@@ -44,7 +44,7 @@ public static class PostEndpoints
             await db.SaveChangesAsync();
 
             return Results.NoContent();
-        });
+        }).RequireAuthorization("CanEdit");
 
         // DELETE 
         app.MapDelete("/posts/{id}", async (int id, portofolioDB db) =>
@@ -57,6 +57,6 @@ public static class PostEndpoints
             }
 
             return Results.NotFound();
-        });
+        }).RequireAuthorization("CanEdit");
     }
 }
