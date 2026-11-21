@@ -1,8 +1,4 @@
-###############################
-# .NET / C# STANDARD IGNORE
-###############################
-
-# Build folders
+# Build
 bin/
 obj/
 
@@ -11,101 +7,38 @@ obj/
 *.user
 *.suo
 
-# Logs
-*.log
-
-# Temp files
-*.tmp
-*.temp
-
-# Publish output
-publish/
-out/
-
-###############################
-# ASP.NET / Web API
-###############################
-
-# User secrets
-secrets.json
-
-# Environment configs
-appsettings.Development.json
-appsettings.Local.json
-
-# DO NOT COMMIT REAL PASSWORDS
-appsettings.json
-
-###############################
-# Entity Framework Core
-###############################
-
-# EF Core design-time files
-Migrations/*Designer.cs
-Migrations/*Snapshot.cs
-
-# SQLite (if ever used)
-*.db
-*.db-shm
-*.db-wal
-
-###############################
-# OS SPECIFIC
-###############################
-
-# Windows
-Thumbs.db
-ehthumbs.db
-
-# macOS
-.DS_Store
-
-# Linux
-*~
-
-###############################
-# IDE SPECIFIC
-###############################
-
 # VS Code
 .vscode/
 
-###############################
-# OTHER
-###############################
-
-# Node (if frontend is inside repo)
+# Node
 node_modules/
-npm-debug.log
-yarn-debug.log
-yarn-error.log
-
-# Cache
-*.cache
-.cache/
-
+dist/
+dist-ssr/
+.vite/
 
 # Logs
-logs
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+logs/
 
-node_modules
-dist
-dist-ssr
-*.local
+# Environment
+.env
+.env.*
+appsettings.json
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# OS
+Thumbs.db
+ehthumbs.db
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+
+# Temp
+*.tmp
+*.temp
+
+# Publish
+publish/
+out/
+
+# Databases
+*.db
+*.db-shm
+*.db-wal
