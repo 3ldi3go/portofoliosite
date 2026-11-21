@@ -1,16 +1,8 @@
+/* Scoped to .page-contact so pages don't leak styles into each other (uses native CSS nesting) */
+.page-contact {
 *{
     box-sizing:border-box;
 }
-
-body{
-    background-image: linear-gradient(to bottom, #90caf9,#2196f3, #0d47a1);
-    background-size:cover;
-    background-attachment:fixed;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align:left;
-    font-size: 1rem;
-}
-
 
 header{
     display:flex;
@@ -129,4 +121,10 @@ button:hover{
         font-size:0.8rem;
         padding: 8px 10px;
     }
+}
+
+.error-message{display:block;color:#b71c1c;font-size:0.9rem;min-height:1.1em;}
+#formstatus{margin-top:15px;font-weight:bold;}
+input[aria-invalid="true"],textarea[aria-invalid="true"]{border-color:#b71c1c;}
+
 }

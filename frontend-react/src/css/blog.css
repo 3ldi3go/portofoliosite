@@ -1,3 +1,5 @@
+/* Scoped to .page-blog so pages don't leak styles into each other (uses native CSS nesting) */
+.page-blog {
 *{box-sizing:border-box;}
 
 header{
@@ -15,15 +17,6 @@ header{
 h1{
     margin:0px;
     padding:0px;
-}
-
-body{
-    background-image: linear-gradient(to bottom, #90caf9,#2196f3, #0d47a1);
-    background-size:cover;
-    background-attachment:fixed;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align:left;
-    font-size: 1rem;
 }
 
 ul{
@@ -117,4 +110,5 @@ nav a:hover{
         font-size:0.7rem;
         padding: 8px 10px;
     }
+}
 }

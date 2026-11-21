@@ -59,3 +59,13 @@ De tests controleren:
 - CRUD\-operaties voor Blogposts
 - Autorisatie voor gewone gebruikers, Editors en Admins
 
+
+# Portfolio (React + Vite)
+
+    npm install
+    npm run dev
+
+Put your images in `public/img/` (diego.jpeg, error.png, github.png, linkedin.png,
+whoami.jpg, html-example.jpg, blog.jpg). They are referenced as `/img/...`.
+
+Replace the placeholders: `src/data/projects.js`, `src/data/posts.js`, `src/hooks/useJoke.js`.

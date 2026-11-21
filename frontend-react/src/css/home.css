@@ -1,3 +1,5 @@
+/* Scoped to .page-home so pages don't leak styles into each other (uses native CSS nesting) */
+.page-home {
 *{box-sizing:border-box;}
 
 header{
@@ -28,15 +30,6 @@ h1{
     margin-right: 100px;
     padding:0px;
 }
-
-body{
-    background-image: linear-gradient(to bottom, #90caf9,#2196f3, #0d47a1);
-    background-size:cover;
-    background-attachment:fixed;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align:left;
-    font-size: 1rem;
-    }
 
 .item{
     display:flex;
@@ -115,21 +108,21 @@ li img{
 
 .belangrijk .wieBenIk{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/whoami.jpg");
+    url("../../img/whoami.jpg");
     background-size:cover;
     background-position:center;
 }
 
 .belangrijk .projecten{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/html-example.jpg");
+    url("../../img/html-example.jpg");
     background-size:cover;
     background-position:center;
 }
 
 .belangrijk .blog{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/blog.jpg");
+    url("../../img/blog.jpg");
     background-size:cover;
     background-position:center;
 }
@@ -237,4 +230,6 @@ li img{
         font-size:0.6rem;
         padding-right: 20px;
     }
+}
+
 }
