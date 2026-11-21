@@ -19,7 +19,7 @@ export default function NavBar({ variant }) {
   const links = LINKS.filter((l) => (isHome ? l.to !== '/' : l.to !== pathname));
 
   return (
-    <nav className={isHome ? 'basic' : undefined}>
+    <nav className="navbar">
       {links.map((l) => (
         <Link key={l.to} to={l.to} className={l.className}>
           {l.label}

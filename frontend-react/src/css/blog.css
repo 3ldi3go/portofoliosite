@@ -1,35 +1,14 @@
-/* Scoped to .page-blog so pages don't leak styles into each other (uses native CSS nesting) */
 .page-blog {
 *{box-sizing:border-box;}
-
-header{
-    background-color:#90caf9;
-    text-align:left;
-    padding-left: 60px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.7rem;
-    padding-top: 25px;
-    padding-bottom:22px;
-    width:100%;
-    border-radius: 10px;
-}
-
-h1{
-    margin:0px;
-    padding:0px;
-}
-
 ul{
     list-style:none;
     padding:0;
     margin:0;
 }
-
 ul li{
     width:80%;
     margin:20px auto;
 }
-
 ul button{
     display:block;
     width:100%;
@@ -42,7 +21,6 @@ ul button{
     text-align:left;
     cursor:pointer;
 }
-
 ul p{
     background-color:#e3f2fd;
     padding: 0 18px;
@@ -53,62 +31,12 @@ ul p{
     max-height:0;
     transition: max-height 0.3s ease;
 }
-
-
-
-nav{
-    display:flex;
-    flex-direction:row;
-    background-color:#0d47a1;
-    border-radius: 10px;
-    text-align:center;
-    margin-bottom: 20px;
-    margin-top:0px;
-    height: 3rem;
-    margin:0px;
-    padding:0px;
-    position:relative;
-    justify-content:center;
-  
-}
-
-nav a{
-    text-decoration:none;
-    text-align:center;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1.2rem;
-    display:inline-block;
-    padding: 14px 16px;
-    color:rgb(207, 218, 255);
-}
-
-nav a:hover{
-    background-color:#093370;
-    color:rgb(133, 255, 255);
-}
-
 @media (max-width: 600px){
-    header{
-        font-size:1.5rem;
-    }
-    .box{
+.box{
         width:80%;
         height:auto;
         justify-content:center;
     }
-    nav a
-    {font-size:1rem;
-    padding: 10px 12px;}
 }
 
-@media (max-width: 400px){
-    header{
-        font-size:1.2rem;
-        padding-left: 20px;
-    }
-    nav a{
-        font-size:0.7rem;
-        padding: 8px 10px;
-    }
-}
 }

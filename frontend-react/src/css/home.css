@@ -1,43 +1,11 @@
-/* Scoped to .page-home so pages don't leak styles into each other (uses native CSS nesting) */
 .page-home {
 *{box-sizing:border-box;}
-
-header{
-    display:flex;
-    justify-content:space-between;
-    background-color:#90caf9;
-    text-align:left;
-    padding-left: 60px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.7rem;
-    padding-top: 25px;
-    padding-bottom:22px;
-    width:100%;
-    border-radius: 10px;
-}
-
-
-#joke{
-    font-size: 1rem;
-    font-style:italic;
-    padding-right: 60px;
-    align-self:center;
-}
-
-
-h1{
-    margin:0px;
-    margin-right: 100px;
-    padding:0px;
-}
-
 .item{
     display:flex;
     flex-direction:row;
     align-items:flex-start;
     gap: 2rem;
 }
-
 .box{
     width:60%;
     max-width: 800px;
@@ -47,7 +15,6 @@ h1{
     border-radius: 10px;
     position:relative;
 }
-
 .references{
     display:flex;
     flex-direction:column;
@@ -64,8 +31,6 @@ h1{
     object-fit: contain; 
 
 }
-
-
 ul{
     display:flex;
     background-color:#e3f2fd;
@@ -79,7 +44,6 @@ ul{
     border-radius: 10px;
     transition: max-width 2s, max-height 2s;
 }
-
 li img{ 
     width: 50px;
     height: 50px;
@@ -89,7 +53,6 @@ li img{
     display:flex;
     flex-direction:row;
 }
-
 .belangrijk a{
     background-color:#031126;
     border-color:#e3f2fd;
@@ -105,130 +68,66 @@ li img{
     justify-content:center;
     text-decoration:none;
 }
-
 .belangrijk .wieBenIk{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../../img/whoami.jpg");
     background-size:cover;
     background-position:center;
 }
-
 .belangrijk .projecten{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../../img/html-example.jpg");
     background-size:cover;
     background-position:center;
 }
-
 .belangrijk .blog{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../../img/blog.jpg");
     background-size:cover;
     background-position:center;
 }
-
-.basic{
-    display:flex;
-    flex-direction:row;
-    background-color:#0d47a1;
-    border-radius: 10px;
-    text-align:center;
-    margin-bottom: 20px;
-    margin-top:0px;
-    height: 3rem;
-    margin:0px;
-    padding:0px;
-    position:relative;
-    justify-content:center;
-  
-}
-
-.basic a{
-    text-decoration:none;
-    text-align:center;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1.2rem;
-    display:inline-block;
-    padding: 14px 16px;
-    color:rgb(207, 218, 255);
-}
-
-.basic a:hover{
-    background-color:#093370;
-    color:rgb(133, 255, 255);
-}
-
 @media (max-width: 600px){
-    header{
-        font-size:1.5rem;
-    }
-    .box{
+.box{
         width:80%;
         height:auto;
         justify-content:center;
     }
-    .basic a
-    {font-size:1rem;
-    padding: 10px 12px;}
-    .belangrijk{
+.belangrijk{
         margin: 20px 20px;
         flex-direction:column;
     }
 }
-
 @media (max-width: 400px){
-    header{
-        font-size:1.2rem;
-        padding-left: 20px;
-    }
-
-    .box{
+.box{
         width:90%;
         height:auto;
         justify-content:center;
     }
-
-    /* BELANGRIJK: alles onder elkaar */
-    .belangrijk{
+.belangrijk{
         flex-direction:column !important;
         align-items:center;
         width:100%;
         gap: 1rem;
     }
-
-    .belangrijk a{
+.belangrijk a{
         width:90%;
         margin: 10px 0;
-        padding: 80px; /* minder padding zodat het niet uitrekt */
+        padding: 80px; 
     }
-
-    /* item netjes onder elkaar */
-    .item{
+.item{
         flex-direction:column !important;
         gap: 1rem;
         width:100%;
     }
-
-    /* references ook onder elkaar */
-    .references{
+.references{
         flex-direction:row;
         align-items:center;
         width:60%;
         padding: 10px;
     }
-
-    .references img{
+.references img{
         width:80px;
         height:80px;
-    }
-
-    .basic a{
-        font-size:0.8rem;
-        padding: 8px 10px;
-    }
-    #joke{
-        font-size:0.6rem;
-        padding-right: 20px;
     }
 }
 

@@ -1,37 +1,16 @@
-/* Scoped to .page-projecten so pages don't leak styles into each other (uses native CSS nesting) */
 .page-projecten {
 *{box-sizing:border-box;}
-
-header{
-    background-color:#90caf9;
-    text-align:left;
-    padding-left: 60px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.7rem;
-    padding-top: 25px;
-    padding-bottom:22px;
-    width:100%;
-    border-radius: 10px;
-}
-
-h1{
-    margin:0px;
-    padding:0px;
-}
-
 main{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align:left;
     font-size: 1rem;
 }
-
 h2{text-align:left;
     font-size: 1.5rem;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left:100px;
 }
-
 li{
     display:flex;
     background-color: #e3f2fd;
@@ -46,26 +25,22 @@ li{
     transition: all 2s;
     justify-content:space-between;
 }
-
 li p{
     padding-left: 20px;
     padding-right: 20px;
 }
-
 li img{ 
     max-width: 200px;
     height: auto;
     margin-left:0px;
     border-radius: 10px;
 }
-
 li:hover{
     max-width: 83%;
     height: 250px;
     font-size: 1.2rem;
 }
-
-button {
+button{
     background-color: #0d47a1;
     color: #fff;
     border: none;
@@ -78,71 +53,34 @@ button {
     border-radius: 10px;
     margin-left: 100px;
 }
-
-button:hover {
+button:hover{
     background-color: #093370;
     color:rgb(133, 255, 255);
 }
-
-nav{
-    display:flex;
-    flex-direction:row;
-    background-color:#0d47a1;
-    border-radius: 10px;
-    text-align:center;
-    margin-bottom: 20px;
-    margin-top:0px;
-    height: 3rem;
-    margin:0px;
-    padding:0px;
-    position:relative;
-    justify-content:center;
-}
-
-nav a{
-    text-decoration:none;
-    text-align:center;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1.2rem;
-    display:inline-block;
-    padding: 14px 16px;
-    color:rgb(207, 218, 255);
-}
-
-nav a:hover{
-    background-color:#093370;
-    color:rgb(133, 255, 255);
-}
-
 @media (max-width: 950px){
-    li{
+li{
     flex-direction:column;
     width:80%;
     height:auto;
     justify-content:center;
 }
-}   
-
+}
 @media (max-width: 600px){
-    ul{
+ul{
         width:95%;
         height:auto;
     }
-    li{
+li{
         width:100%;
         height:auto;
         justify-content:center;
     }
-    li img{
+li img{
         max-width: 150px;
         height: auto;
         margin-top:0px;
     }
-    nav a {
-    font-size:1rem;
-    padding: 10px 12px;}
-
-    li:hover{
+li:hover{
         max-width: 100%;     
         height: auto;      
         font-size: 1.05rem;   
@@ -151,37 +89,26 @@ nav a:hover{
         transition: all 2s ease;
     }
 }
-
 @media(max-width:505px){
-    button{
+button{
         margin-left:0px;
     }
-    h2{
+h2{
         margin-left:0px;
     }
-
 }
-
 @media (max-width: 400px){
-    header{
-        font-size:1.2rem;
-        padding-left: 20px;
-    }
-    nav a{
-        font-size:0.8rem;
-        padding: 8px 10px;
-    }
-
-    li{
+li{
         width:100%;
         height:auto;
         justify-content:center;
     }
-    li img{
+li img{
         max-width: 125px;
         max-height:125px;
         height: auto;
         margin-top:0px;
     }
 }
+
 }
